@@ -1,0 +1,120 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ECF0F1 ;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+s
+nav .mobile {
+    display: none;
+}
+nav .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button{
+    border: none;
+    background-color:black; 
+    color: aliceblue;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.material-icons-outlined {
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.collapsed {
+    display: none;
+}
+
+nav .logo {
+    min-width: 250px; /*almenos esta capa debe medir 250*/
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /*con esto quitamos el subrayado de los hipervinculos de las a*/
+    display: block; /*recuerda que con esto hace mos que las cosas se acomoden en clumnas*/
+    padding: 20px 25px;
+}
+
+nav a:hover { /*recuerda que el hover significa que los se aplicara esto cuando pongas el cursor dentro del obejot asignado en esta seccion */
+    color: black;
+    background-color: #00c3ff; 
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+nav .desktop .primary, 
+nav .desktop .secondary {
+    display: flex;
+}
+
+nav .desktop .secondary.mini {
+    display: none;
+}
+
+.description {
+    align-items: center;
+    text-align: center;
+    padding-top: 300px;
+}
+
+@media screen and (max-width: 853px) { /*cuando se pasen estos pixeles se aplicaran las reglas adentre del media screen*/
+nav .logo {
+    min-width: 100px; /*el logo debera tener al menos 100px*/
+}
+
+nav .secondary.full {
+    display: none; 
+}
+
+nav .secondary.mini {
+    display: block !important; /*con este important le decimos a la pagina que le de mayor relevancia a esta seccion al momento de cumplir con la condicional del media*/
+}
+
+nav .secondary.mini .submenu {
+    background-color: black;
+    position: absolute;
+    display: none;
+    width: 200px;
+    right: 0; /*con esto el submenu comenzara a partir de la derecha y asi se vera mas ancho*/
+}
+
+nav .secondary.mini:hover  .submenu {
+    display: block;
+    }
+}
+@media screen and (max-width: 500px) {  /*mobile version*/
+    nav .desktop { 
+        display: none;
+    }
+    nav .mobile { 
+        display: block;
+        
+
+    }
+}
